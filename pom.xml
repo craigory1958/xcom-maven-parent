@@ -9,13 +9,13 @@
 
 	<groupId>xcom</groupId>
 	<artifactId>parent</artifactId>
-	<version>0.0.7a</version>
+	<version>0.0.7b</version>
 	<packaging>pom</packaging>
 
 
 	<properties>
 
-		<xcom.utils4j.version>1.0.7</xcom.utils4j.version>
+		<xcom.utils4j.version>1.0.7a</xcom.utils4j.version>
 
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,7 +34,7 @@
 
 		<joda-time.joda-time.version>LATEST</joda-time.joda-time.version>
 
-		<junit.junit.version>4.8.2</junit.junit.version>
+		<junit.junit.version>4.13.2</junit.junit.version>
 
 		<mysql.mysql-connector-java.version>5.1.38</mysql.mysql-connector-java.version>
 
