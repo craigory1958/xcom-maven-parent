@@ -9,7 +9,7 @@
 
 	<groupId>xcom</groupId>
 	<artifactId>parent</artifactId>
-	<version>0.0.7b</version>
+	<version>0.0.7c</version>
 	<packaging>pom</packaging>
 
 
@@ -38,8 +38,8 @@
 
 		<mysql.mysql-connector-java.version>5.1.38</mysql.mysql-connector-java.version>
 
-		<net.sf.jung.jung-api.version>LATEST</net.sf.jung.jung-api.version>
-		<net.sf.jung.jung-graph-impl.version>LATEST</net.sf.jung.jung-graph-impl.version>
+		<net.sf.jung.jung-api.version>2.1.1</net.sf.jung.jung-api.version>
+		<net.sf.jung.jung-graph-impl.version>2.1.1</net.sf.jung.jung-graph-impl.version>
 
 		<net.sourceforge.javacsv.javacsv.version>2.0</net.sourceforge.javacsv.javacsv.version>
 
@@ -49,16 +49,25 @@
 
 		<org.aspectj.aspectjrt.version>1.7.4</org.aspectj.aspectjrt.version>
 
-		<org.apache.commons.commons-lang3.version>3.4</org.apache.commons.commons-lang3.version>
+		<org.apache.commons.commons-lang3.version>3.12.0</org.apache.commons.commons-lang3.version>
 		<org.apache.bcel.bcel.version>5.2</org.apache.bcel.bcel.version>
-		<org.apache.poi.poi.version>3.15</org.apache.poi.poi.version>
-		<org.apache.poi.poi-ooxml.version>3.15</org.apache.poi.poi-ooxml.version>
+		<org.apache.poi.poi.version>5.0.0</org.apache.poi.poi.version>
+		<org.apache.poi.poi-ooxml.version>5.0.0</org.apache.poi.poi-ooxml.version>
 
 		<org.easytesting.fest-reflect.version>LATEST</org.easytesting.fest-reflect.version>
 
+		<org.hibernate.hibernate-core.version>4.0.3.RELEASE</org.hibernate.hibernate-core.version>
+		<org.hibernate.hibernate-entitymanager.version>4.0.3.RELEASE</org.hibernate.hibernate-entitymanager.version>
+
 		<org.hsqldb.hsqldb.version>LATEST</org.hsqldb.hsqldb.version>
 
+		<org.projectlombok.lombok.version>1.18.24</org.projectlombok.lombok.version>
+
+		<org.mockito.mockito-all.version>4.0.3.RELEASE</org.mockito.mockito-all.version>
+
 		<org.reflections.reflections.version>LATEST</org.reflections.reflections.version>
+		
+		<org.seleniumhq.selenium-java.version>3.141.59</org.seleniumhq.selenium-java.version>
 
 		<org.slf4j.slf4j-api.version>LATEST</org.slf4j.slf4j-api.version>
 		<org.slf4j.slf4j-log4j12.version>LATEST</org.slf4j.slf4j-log4j12.version>
@@ -67,10 +76,6 @@
 		<org.springframework.spring-context.version>4.0.3.RELEASE</org.springframework.spring-context.version>
 		<org.springframework.spring-tx.version>4.0.3.RELEASE</org.springframework.spring-tx.version>
 		<org.springframework.spring-webmvc.version>4.0.3.RELEASE</org.springframework.spring-webmvc.version>
-		<org.hibernate.hibernate-core.version>4.0.3.RELEASE</org.hibernate.hibernate-core.version>
-		<org.hibernate.hibernate-entitymanager.version>4.0.3.RELEASE</org.hibernate.hibernate-entitymanager.version>
-
-		<org.mockito.mockito-all.version>1.9.0</org.mockito.mockito-all.version>
 
 
 		<aspectj-maven-plugin.version>1.7</aspectj-maven-plugin.version>
@@ -88,14 +93,6 @@
 
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>LATEST</version>
-			<optional>true</optional>
-		</dependency>
-
 		<!-- Apache Commons Lang-3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -109,6 +106,15 @@
 			<artifactId>fest-reflect</artifactId>
 			<version>1.4.1</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${org.projectlombok.lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
 		<dependency>
@@ -133,7 +139,7 @@
 
 
 		<!-- Testing -->
-		<dependency>
+ 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.junit.version}</version>
@@ -149,13 +155,13 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-module-junit4</artifactId>
 			<version>1.7.4</version>
 			<scope>test</scope>
 		</dependency>
-
+ -->
 		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
 		<dependency>
 			<groupId>org.powermock</groupId>
